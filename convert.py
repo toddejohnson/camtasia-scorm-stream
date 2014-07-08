@@ -84,7 +84,7 @@ class convert_wx(wx.Frame):
         dialog.Destroy()
         
     def OnBrowseClickDir(self,event):
-        dialog = wx.FileDialog(self, "Choose a directory",style=wx.DD_DEFAULT_STYLE)
+        dialog = wx.DirDialog(self, "Choose a directory",style=wx.DD_DEFAULT_STYLE)
         if dialog.ShowModal() == wx.ID_OK:
             self.outputfolder.SetValue(dialog.GetPath())
         dialog.Destroy()
